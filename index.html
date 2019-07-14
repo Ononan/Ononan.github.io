@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Prosto+One|Underdog&display=swap" rel="stylesheet">
+    <title>Game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        body{
+            display: flex;
+            height: 100vh;
+        }
+        .fon{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background-image:url(img/background.png);
+            -webkit-filter:blur(5px);
+            filter:blur(5px);
+        }
+        .canvas{
+            /* display: block; */
+            border-radius: 5px;
+            margin: 0 auto;
+            align-self: center;
+            border: 2px;
+        }
+        #div {
+            display: block;
+            width: 500px;
+            height: 350px;
+            /* background-image: url(img/wood.jpg); */
+            /* background-color: #9b4f03; */
+        }
+        #div span{
+            font-size: 12px;
+            color: rgb(209, 0, 0);
+            display: block;
+            text-align: center;
+            padding-top: 3px;
+        }
+        #div input{
+            display: block;
+            margin: 0 auto;
+            margin-top: 100px;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 30px;
+            text-align: right;
+            color: #992e1e;
+            background-color: #f58726;
+            border: 2px solid #c46b19;
+            font-family: 'Underdog', cursive;
+            color: #f04440;
+            font-weight: bold;
+        }
+        #div button{
+            border: 2px solid gray;
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 180px;
+            height: 45px;
+            border-radius: 5px;
+            font-family: 'Underdog', cursive;
+            background-color: #f3aa75 ;
+            border: 2px solid #f58726;
+            font-size: 25px;
+            color: #f04440;
+            font-weight: bold;
+        }
+        #div button:hover{
+            cursor: pointer;
+        }
+        table{
+            width: 100%;
+            color: #930205;
+            font-family: 'Underdog', cursive;
+            margin: 30px 0;
+            font-size: 30px; 
+        }
+        table tr{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fon"></div>
+    <div style="display: block" id="div" class="canvas">
+        <input type="text" maxlength="10">
+        <button>Начать игру</button>
+    </div>
+    <canvas style="display: none" class="canvas" width="1000px" height="500px"></canvas>
+    <script src="script/control.js"></script>
+    <script src="script/update.js"></script>
+    <script src="script/render.js"></script>
+    <script src="script/timer.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/made.js"></script>    
+    <script src="script/tableResult.js"></script>
+    <script src="script/menu.js"></script>
+
+</body>
+
+</html>
